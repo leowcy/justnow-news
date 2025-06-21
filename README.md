@@ -57,6 +57,3 @@ Read more: https://nytimes.com/...
 ☁️ Deploy with Docker / systemd
 
 🔔 Add Telegram alert on error
-
-👏 Credits
-Built by @yourname with ❤️ and GPT-4.
