@@ -4,14 +4,16 @@ import time
 
 from utils.news import fetch_news
 from utils.x import post_tweet_v2
+from utils.formatter import generate_tweet_prompt
+
 
 load_dotenv()
 
 def job():
     news_list = fetch_news()
     for news in news_list:
-        content = f"{news['title']}\\n{news['link']}"
-        post_tweet_v2(content)
+        formatted_text = generate_tweet_prompt(news["title"], news["link"])
+        post_tweet_v2(formatted_text)
 
 # 每小时运行一次
 schedule.every().hour.do(job)
