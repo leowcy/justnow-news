@@ -1,10 +1,62 @@
-# justnow-news
-This is a repo for auto grabbing latest news and post them on X/Facebook/Rednote and so on.
+# 📰 JustNow News Bot
 
-# How to run:
-1. python -m venv path/to/venv
-2. source path/to/venv/bin/active
-3. pip install -r requirements.txt
-4. Copy the .env.example to .env with contents
-5. python auth_flow.py - Authorize and get keys and copy to .env
-6. python main.py
+An automated Twitter/X bot that fetches breaking news and posts it to your account in a **clean, engaging, AI-enhanced format**.
+
+---
+
+## ✅ Features
+
+- ⏱ Fetches the latest headlines from RSS feeds (e.g. NYTimes)
+- 🧠 Uses **ChatGPT (OpenAI)** to rewrite headlines into catchy tweets
+- 🐦 Posts them automatically to your X (Twitter) account using **OAuth 2.0 User Context**
+- 🔄 Runs hourly with `schedule`
+- ✅ Supports **Tweepy** or native `requests` for posting
+- 🔐 Environment-configurable for flexibility and security
+
+---
+
+## 🚀 How to Run
+
+### 1. Clone the project
+
+```bash
+git clone <your-repo-url>
+cd justnow-news
+```
+
+### 2. Install dependencies
+pip install -r requirements.txt
+
+### 3. Set up environment variables
+Copy
+cp .env.example .env
+Update your .env with:
+
+Copy
+TWITTER_CLIENT_ID=xxx
+TWITTER_CLIENT_SECRET=xxx
+TWITTER_ACCESS_TOKEN=xxx
+OPENAI_API_KEY=sk-xxxx
+
+### 4. Start the bot
+python main.py
+
+🚀 JustNow Bot Started...
+✅ Tweet posted: https://x.com/user/status/123...
+✨ Sample Tweet Output
+🚨 “AI Revolution Is Here” — Here’s what OpenAI just announced today.
+Read more: https://nytimes.com/...
+
+🛠 Optional Enhancements
+🧠 Add GPT summaries
+
+🔁 De-duplicate tweet history
+
+🗃️ Log to SQLite or CSV
+
+☁️ Deploy with Docker / systemd
+
+🔔 Add Telegram alert on error
+
+👏 Credits
+Built by @yourname with ❤️ and GPT-4.
