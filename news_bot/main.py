@@ -15,7 +15,6 @@ def job():
         formatted_text = generate_tweet_prompt(news["title"], news["link"])
         post_tweet_v2(formatted_text)
 
-# 每小时运行一次
 schedule.every().hour.do(job)
 
 if __name__ == "__main__":
