@@ -25,21 +25,22 @@ cd justnow-news
 ```
 
 ### 2. Install dependencies
-pip install -r requirements.txt
+make install
 
 ### 3. Set up environment variables
 Copy
 cp .env.example .env
 Update your .env with:
 
-Copy
-TWITTER_CLIENT_ID=xxx
-TWITTER_CLIENT_SECRET=xxx
-TWITTER_ACCESS_TOKEN=xxx
-OPENAI_API_KEY=sk-xxxx
+### 4. Run X auth
+python news_bot/utils/auth_flow.py
 
-### 4. Start the bot
-python main.py
+Click authorize and copy and secrets into
+TWITTER_ACCESS_TOKEN=
+TWITTER_REFRESH_TOKEN=
+
+### 5. Start the bot
+make run
 
 🚀 JustNow Bot Started...
 ✅ Tweet posted: https://x.com/user/status/123...
